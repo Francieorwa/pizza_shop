@@ -1,25 +1,34 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Pizza_Shop
 
-Things you may want to cover:
+Welcome to Pizza Shop API! This is a Rails application that provides a backend API for a pizza ordering system.
+Restaurant owners can manage their menus and orders through this API, and customers can place orders.
 
-* Ruby version
+### Installation
 
-* System dependencies
+- gem install rails
+- rails new (name of project) --skip-javascript
 
-* Configuration
+#### Install dependencies:
 
-* Database creation
+- bundle install
 
-* Database initialization
+#### Set up the database:
 
-* How to run the test suite
+- rails db:migrate
+- rails db:seed
 
-* Services (job queues, cache servers, search engines, etc.)
+#### Start the server:
 
-* Deployment instructions
+- rails s
 
-* ...
-# pizza_shop
+### Endpoints
+
+- resources :restaurant_pizzas, only: [:create]
+- resources :restaurants, only: [:index, :show, :destroy]
+- resources :pizzas, only: [:index]
+
+### License
+
+This project is licensed under the MIT License. See LICENSE for more information.
