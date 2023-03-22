@@ -1,6 +1,7 @@
 class PizzasController < ApplicationController
-    def index
-        pizzas = Pizza.all
-        render json: pizzas, only: [:id, :name, :ingredients]
-      end
+  # Retrieve all Pizzas and return their ID, name, and ingredients
+  def index
+      pizzas = Pizza.all
+      render json: pizzas, only: [:id, :name, :ingredients]
+  end
 end
